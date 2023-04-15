@@ -1,0 +1,19 @@
+<!--
+    tf2 实现小乌龟跟随案例
+-->
+<launch>
+    <!-- 启动乌龟节点与键盘控制节点 -->
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle1" output="screen" />
+    <node pkg="turtlesim" type="turtle_teleop_key" name="key_control" output="screen"/>
+    <!-- 启动创建第二只乌龟的节点 -->
+    <node pkg="tf_dynamic" type="Create_Turtle2.py" name="turtle2" output="screen" />
+    <!-- 启动两个坐标发布节点 -->
+    <!-- 发布两只乌龟的坐标信息
+        1.复用之前的乌龟坐标信息发布功能；
+        2.调用节点时，一参数的方式传递乌龟名称，解析参数置换；订阅的话题信息 和 子级坐标信息的名称
+     -->
+    <node pkg="tf_dynamic" type="TF2_pub.py" name="pub1" output="screen" args="turtle1" />
+    <node pkg="tf_dynamic" type="TF2_pub.py" name="pub2" output="screen" args="turtle2" />
+    <!-- 启动坐标转换节点 -->
+    <node pkg="tf_dynamic" type="TF2_sub.py" name="sub" output="screen" />
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/xiang/catkin_ws/devel
+
+Name: rosbag
+Description: Description of rosbag
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

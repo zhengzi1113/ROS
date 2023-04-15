@@ -1,0 +1,8 @@
+prefix=/home/xiang/catkin_ws/devel_isolated/tf_static
+
+Name: tf_static
+Description: Description of tf_static
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
