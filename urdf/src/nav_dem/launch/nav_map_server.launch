@@ -1,0 +1,5 @@
+<launch>
+<!-- 方便修改 yaml 文件 -->
+    <arg name="map" default="nav.yaml" />
+    <node name="map_serve" pkg="map_server" type="map_server" args="$(find nav_dem)/map/nav.yaml" />
+</launch>

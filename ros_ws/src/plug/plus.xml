@@ -1,0 +1,17 @@
+<!-- 
+    需要定位动态连接库
+        library 根标签下的 nath 属性设置
+    声明子类和父类
+        library 的子标签 class 声明
+ -->
+
+<library path="lib/libplus" >
+    <class type="dbx_plugins_ns::SanBian" base_class_type="dbx_base_ns::Dbx_Base" >
+        <description>这是正三边行插件</description>
+    </class>
+
+    <class type="dbx_plugins_ns::SiBian" base_class_type="dbx_base_ns::Dbx_Base" >
+        <description>这是正四边行插件</description>
+    </class>
+
+</library>

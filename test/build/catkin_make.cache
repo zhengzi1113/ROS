@@ -1,0 +1,2 @@
+apis:hello:launch_basid:my:node:param:param_server:sever_client:topic:twist_test
+-DCATKIN_DEVEL_PREFIX=/home/xiang/test/devel -DCMAKE_INSTALL_PREFIX=/home/xiang/test/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/xiang/test/devel
+
+Name: launch_basid
+Description: Description of launch_basid
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

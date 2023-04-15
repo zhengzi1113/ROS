@@ -1,0 +1,2 @@
+set(action_MESSAGE_FILES "/home/xiang/ros_ws/devel/share/action/msg/AddIntsAction.msg;/home/xiang/ros_ws/devel/share/action/msg/AddIntsActionGoal.msg;/home/xiang/ros_ws/devel/share/action/msg/AddIntsActionResult.msg;/home/xiang/ros_ws/devel/share/action/msg/AddIntsActionFeedback.msg;/home/xiang/ros_ws/devel/share/action/msg/AddIntsGoal.msg;/home/xiang/ros_ws/devel/share/action/msg/AddIntsResult.msg;/home/xiang/ros_ws/devel/share/action/msg/AddIntsFeedback.msg")
+set(action_SERVICE_FILES "")

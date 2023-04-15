@@ -1,0 +1,33 @@
+<!-- <launch deprecated="此文件已经过时，你建议使用！"> -->
+<launch>
+
+    <!-- 启动节点 -->
+    <!-- respawn="true" 节点关闭自动重启 -->
+    <!-- required="true" 节点退出之后关闭整个系统 -->
+    <!-- ns="hello"增加命名空间 -->
+    <!-- param 使用 ：向参数服务器设置参数 -->
+    <!-- 格式1：launch 下，node 外 -->
+    <param name ="param_A" type ="int" value="100" />
+
+    <!-- rosparam 使用：操作参数服务器数据 -->
+    <!-- 格式1：launch 下 ,node 外 -->
+    <!-- 加载参数 -->
+    <rosparam command = "load" file = "$(find launch_basid)/launch/params.yaml" />
+    <!-- 导出参数 -->
+    <!-- 方法1：执行start_turtle 在执行 dump -->
+    <!-- 方法2：直接调用<rosparam command = "load" file = "$(find launch_basid)/launch/params.yaml" /> -->
+
+    <node pkg ="turtlesim" type ="turtlesim_node" name="my_turtle" output="screen">
+        <remap from="/turtle1/cmd_vel" to="/cmd_vel" />
+
+        <!-- 格式2：node 下 -->
+         <param name ="param_B" type ="double" value="3.14" />
+
+         <!-- 格式2：node 下 -->
+         <rosparam command = "load" file = "$(find launch_basid)/launch/params.yaml" />
+
+    </node>
+    <!-- 键盘控制节点 -->
+    <node pkg ="turtlesim" type ="turtle_teleop_key" name="my_key" output="screen" />
+    <!-- rosrun teleop_twist_keyboard teleop_twist_keyboard.py -->
+</launch>

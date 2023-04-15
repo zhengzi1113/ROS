@@ -1,0 +1,2 @@
+action:dr:nodelete_demo:plug
+-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/xiang/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/xiang/ros_ws/install -G Unix Makefiles

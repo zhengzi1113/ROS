@@ -1,0 +1,15 @@
+<launch>
+    <!-- 设置nodelet管理器 -->
+    <node pkg="nodelet" type="nodelet" name="mymanager" args="manager" output="screen" />
+    <!-- 启动节点1，名称为 xiang, 参数 /xiang/value 为100 -->
+    <node pkg="nodelet" type="nodelet" name="xiang" args="load nodelet_tutorial_math/Plus mymanager" output="screen" >
+        <param name="value" value="100" />
+    </node>
+    <!-- 启动节点2，名称为 yang, 参数 /yang/value 为-50 -->
+    <node pkg="nodelet" type="nodelet" name="yang" args="load nodelet_tutorial_math/Plus mymanager" output="screen" >
+        <param name="value" value="-50" />
+        <remap from="/yang/in" to="/xiang/out" />
+    </node>
+
+</launch>
+

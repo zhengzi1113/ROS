@@ -1,0 +1,16 @@
+<launch>
+    <!-- 启动乌GUI 与键盘控制节点 -->
+
+    <group ns ="first">
+        <node pkg ="turtlesim" type ="turtlesim_node" name="my_turtle" output="screen" />
+        <!-- 键盘控制节点 -->
+        <node pkg ="turtlesim" type ="turtle_teleop_key" name="my_key" output="screen" />
+    </group>
+    <!-- 不分组后面的会将前面的节点覆盖 -->
+     <group ns ="second">
+        <node pkg ="turtlesim" type ="turtlesim_node" name="my_turtle" output="screen" />
+        <!-- 键盘控制节点 -->
+        <node pkg ="turtlesim" type ="turtle_teleop_key" name="my_key" output="screen" />
+    </group>
+
+</launch>

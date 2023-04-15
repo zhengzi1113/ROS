@@ -1,0 +1,8 @@
+prefix=/home/xiang/test/devel
+
+Name: Twist
+Description: Description of Twist
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

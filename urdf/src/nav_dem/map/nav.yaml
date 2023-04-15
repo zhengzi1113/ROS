@@ -1,0 +1,16 @@
+#声明地图图片资源的绝对路径
+image: /home/xiang/urdf/src/nav_dem/map/nav.pgm
+#地图刻度尺单位是 米/像素
+resolution: 0.050000
+
+#地图的位姿(相对rviz中的原点坐标)
+#(x方向，y方向，偏航角度（单位为弧度）)
+origin: [-50.000000, -50.000000, 0.000000]
+
+#取反
+negate: 0
+#占用阀值
+occupied_thresh: 0.65
+#空间阀值
+free_thresh: 0.196
+

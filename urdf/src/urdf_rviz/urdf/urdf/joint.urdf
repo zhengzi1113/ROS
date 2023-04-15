@@ -1,0 +1,41 @@
+<!-- 需求：设置机器人底盘，添加摄像头 -->
+<robot name ="mycar">
+
+    <link name ="base_link">
+        <visual>           
+            <geometry>
+                <box size="0.4 0.2 0.2" />
+            </geometry> 
+            <origin xyz="0 0 0" rpy="0 0 0" />           
+            <material name="car_color">
+                <color rgba = "0.2 0.3 1 1" />
+            </material>
+        </visual>
+    </link>
+    <!-- 2.摄像头link -->
+    <link name ="camera">
+        <visual>           
+            <geometry>
+                <box size="0.02 0.05 0.06" />
+            </geometry> 
+            <!-- 先使用默认(后期在进行修改) -->
+            <origin xyz="0 0 0.03" rpy="0 0 0" />           
+            <material name="camera">
+                <color rgba = "0 0 1 0.5" />
+            </material>
+        </visual>
+    </link>
+    <!-- 3.关节 -->
+    <joint name="camerabase" type="continuous" >
+        <!-- 父级 link -->
+        <parent link="base_link" />
+        <!-- 子级 link -->
+        <child link ="camera" />
+        <!-- 设置偏移量 -->
+        <!-- 0.07为夫级节点的z的一半 -->
+        <origin xyz="0.21 0 0.07" rpy="0 0 0" /> 
+        <!-- 设置关节旋转参考的坐标轴 -->
+        <axis xyz="0 0 1" />
+    </joint>
+        
+</robot>

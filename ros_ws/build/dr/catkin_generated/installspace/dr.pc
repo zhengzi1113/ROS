@@ -1,0 +1,8 @@
+prefix=/home/xiang/ros_ws/install
+
+Name: dr
+Description: Description of dr
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

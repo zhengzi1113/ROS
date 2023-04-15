@@ -1,0 +1,14 @@
+<!-- 集成SLAM与导航，实现机器人自主移动的地图构建 -->
+<launch>
+    
+    <!-- 启动AMCL节点 -->
+    <include file="$(find nav_dem)/launch/nav_amcl.launch" />
+
+    <!-- 运行move_base节点 -->
+    <include file="$(find nav_dem)/launch/nav_path.launch" />
+    <!-- 运行rviz -->
+
+    <node pkg="rviz" type="rviz" name="rviz" />
+
+</launch>
+

@@ -1,0 +1,8 @@
+prefix=/home/xiang/test/install
+
+Name: twist_test
+Description: Description of twist_test
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

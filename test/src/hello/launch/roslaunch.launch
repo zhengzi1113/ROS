@@ -1,0 +1,6 @@
+<launch>
+    <!--tianjia xuyao shiyong de jiedian-->>
+
+    <node pkg ="turtlesim" type ="turtlesim_node" name ="turtle_GUI"/>
+    <node pkg ="turtlesim" type="turt_teleop_key" name ="turt_key"/>
+</launch>

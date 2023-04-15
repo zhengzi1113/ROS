@@ -1,0 +1,2 @@
+arbotix_ros-noetic-devel/arbotix:arbotix_ros-noetic-devel/arbotix_controllers:arbotix_ros-noetic-devel/arbotix_firmware:arbotix_ros-noetic-devel/arbotix_msgs:arbotix_ros-noetic-devel/arbotix_python:arbotix_ros-noetic-devel/arbotix_sensors:nav_dem:urdf_gazebo:urdf_rviz
+-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/xiang/urdf/devel -DCMAKE_INSTALL_PREFIX=/home/xiang/urdf/install -G Unix Makefiles

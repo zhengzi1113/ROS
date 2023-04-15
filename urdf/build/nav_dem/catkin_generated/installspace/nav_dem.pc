@@ -1,0 +1,8 @@
+prefix=/home/xiang/urdf/install
+
+Name: nav_dem
+Description: Description of nav_dem
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/xiang/ros_ws/devel
+
+Name: nodelete_demo
+Description: Description of nodelete_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
